@@ -25,6 +25,7 @@ jobs:
 
       - name: Build the Next.js app
         run: |
+          cd ..
           npm run build
 
       - name: Start the Next.js app
