@@ -19,11 +19,12 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd project-a
+          npm install
 
       - name: Build the Next.js app
         run: |
-          cd project-a
           npm run build
 
       - name: Start the Next.js app
