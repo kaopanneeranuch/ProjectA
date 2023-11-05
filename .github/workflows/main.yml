@@ -25,7 +25,6 @@ jobs:
         run: |
           cd /project-a
           npm run build
-        working-directory: /project-a  # Set the working directory to the root of the repository
 
       - name: Start the Next.js app
         run: npm start &
