@@ -29,7 +29,9 @@ jobs:
           npm run build
 
       - name: Start the Next.js app
-        run: npm start &
+        run: |
+          cd project-a
+          npm start &
 
       - name: Wait for the app to start
         run: |
