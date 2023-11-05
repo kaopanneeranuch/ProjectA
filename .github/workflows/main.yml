@@ -18,22 +18,15 @@ jobs:
         with:
           node-version: 14
 
-      - name: set working directory
-        run : | 
-          cd project-a
-
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm install
 
       - name: Build the Next.js app
-        run: |
-          npm run build
-        working-directory: path/to/your/project
+        run: npm run build
+        working-directory: ./  # Set the working directory to the root of the repository
 
       - name: Start the Next.js app
-        run: |
-          npm start &
+        run: npm start &
 
       - name: Wait for the app to start
         run: |
@@ -49,5 +42,4 @@ jobs:
           exit 1
 
       - name: Run tests
-        run: |
-          npm test
+        run: npm test
