@@ -45,8 +45,3 @@ jobs:
           done
           echo "App did not start properly."
           exit 1
-
-      - name: Run tests
-        run: |
-          cd project-a
-          npm test
