@@ -1,5 +1,4 @@
 {
   "extends": "next/core-web-vitals",
-  "try": "pull-request"
-
+  "try": "pull-request ver2"
 }
