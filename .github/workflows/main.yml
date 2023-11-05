@@ -47,4 +47,6 @@ jobs:
           exit 1
 
       - name: Run tests
-        run: npm test
+        run: |
+          cd project-a
+          npm test
