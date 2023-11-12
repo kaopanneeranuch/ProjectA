@@ -1,9 +1,3 @@
-steps:
-  - name: credentials
-    env:
-      GOOGLE_SHEETS_CREDS: ${{ secrets.GOOGLE_SHEETS_CREDS }}
-    run: python test_sheets.py
-
 name: Test Secrets
 on: [push]
 
