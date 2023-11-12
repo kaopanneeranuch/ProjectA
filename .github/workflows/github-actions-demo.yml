@@ -5,6 +5,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: List files in current directory
         run: ls -l
       - name: test_sheets
@@ -12,4 +14,4 @@ jobs:
           GOOGLE_SHEETS_CREDS: ${{ secrets.GOOGLE_SHEETS_CREDS }}
         run: python test.py
       # - name: Print secret
-      #   run: echo "Secret is ${{ secrets.GOOGLE_SHEETS_CREDS }}"5
+      #   run: echo "Secret is ${{ secrets.GOOGLE_SHEETS_CREDS }}"
