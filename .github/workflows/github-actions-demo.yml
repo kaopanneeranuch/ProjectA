@@ -8,6 +8,6 @@ jobs:
       - name: test_sheets
         env:
           GOOGLE_SHEETS_CREDS: ${{ secrets.GOOGLE_SHEETS_CREDS }}
-        run: python test_sheets.py
+        run: python test.py
       # - name: Print secret
       #   run: echo "Secret is ${{ secrets.GOOGLE_SHEETS_CREDS }}"5
