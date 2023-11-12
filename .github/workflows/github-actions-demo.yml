@@ -1,5 +1,5 @@
 steps:
-  - name: My step
+  - name: credentials
     env:
       GOOGLE_SHEETS_CREDS: ${{ secrets.GOOGLE_SHEETS_CREDS }}
     run: python test_sheets.py
@@ -11,5 +11,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: credentials
+        env:
+          GOOGLE_SHEETS_CREDS: ${{ secrets.GOOGLE_SHEETS_CREDS }}
+        run: python test_sheets.py
       - name: Print secret
         run: echo "Secret is ${{ secrets.GOOGLE_SHEETS_CREDS }}"
